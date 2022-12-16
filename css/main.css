@@ -1,0 +1,611 @@
+:root {
+  --yelewo-color: #f8cb2e;
+  --light-red-color: #ee5007;
+  --dark-red-color: #c01f27;
+  --main-tarnistion: 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  height: 1000px;
+}
+
+.main-btn {
+  background-color: var(--light-red-color);
+  transition: var(--main-tarnistion);
+}
+
+.main-btn:hover {
+  color: white !important;
+  background-color: var(--dark-red-color);
+}
+
+/* strat top nav */
+.topnav {
+  background-color: var(--yelewo-color);
+}
+
+.topnav svg {
+  font-size: 15px;
+  color: var(--light-red-color);
+}
+
+/* end top nav */
+/* start navbar */
+.navbar.fixed-top {
+  background-color: black;
+}
+
+.navbar {
+  background-color: transparent;
+  transition: var(--main-tarnistion);
+  z-index: 1000;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    background-color: black;
+  }
+}
+
+.navbar .nav-t {
+  color: white;
+  transition: var(--main-tarnistion);
+}
+
+.navbar .navbar-toggler[aria-expanded="true"] .nav-t {
+  color: var(--dark-red-color);
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 18px;
+  transition: var(--main-tarnistion);
+}
+
+.navbar ul li:hover a {
+  color: var(--light-red-color) !important;
+}
+
+.navbar ul .active {
+  color: var(--light-red-color) !important;
+}
+
+/* end navbar */
+.main {
+  height: calc(100vh - 46px);
+}
+.do-hero {
+  height: 130vh;
+}
+.main .overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.main .hero-vid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero {
+  height: 100%;
+}
+
+.hero .text span {
+  font-size: 14px;
+}
+
+.hero .text h1 {
+  font-size: 76px;
+  transition: var(--main-tarnistion);
+}
+
+@media (max-width: 575.98px) {
+  .hero .text h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 440.98px) {
+  .hero .text h1 {
+    font-size: 40px;
+  }
+}
+
+.hero .text a {
+  width: fit-content;
+}
+
+.hero .con span:not(.last) {
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.hero .con .dd {
+  color: var(--light-red-color);
+  font-size: 23px;
+}
+
+.hero .con ul li a {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-red-color);
+  border-radius: 100%;
+  margin: 0;
+  transition: var(--main-tarnistion);
+  color: white;
+  font-size: 17px;
+}
+
+.hero .con ul li a:hover {
+  background-color: var(--yelewo-color);
+  animation: rot linear infinite 2s;
+}
+
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* start about */
+.about {
+  background-image: url(/images/edward-unsplash-blur.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.about .left h1 {
+  font-size: 47px;
+}
+
+.about .left p {
+  font-size: 19px;
+}
+
+.about .left h2 {
+  font-size: 23px;
+}
+
+.about .right {
+  min-height: 100%;
+}
+
+.about .right .box {
+  height: 100%;
+  background-image: url(/images/pexels-alexander-suhorucov-6457579.jpg);
+  background-position: left;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.about .right .box .holder {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(5px) saturate(180%);
+}
+
+.about .right .box .holder span {
+  width: 70px;
+  height: 70px;
+  background-color: var(--yelewo-color);
+}
+
+.about .right .box .holder span svg {
+  width: 25px;
+  height: 25px;
+}
+
+.about .right .box .holder p {
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .about .right {
+    height: 464px;
+  }
+}
+
+/* end about */
+/* start artist */
+.artists h1 {
+  font-size: 47px;
+}
+
+.artists .box {
+  width: fit-content;
+}
+
+@media (max-width: 575.98px) {
+  .artists h1 {
+    font-size: 30px;
+  }
+}
+
+.artists .box .text {
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  padding: 30px;
+  background-color: rgba(248, 203, 46, 0.75);
+  backdrop-filter: blur(5px) saturate(180%);
+  transition: 0.7s linear;
+  opacity: 0;
+}
+
+.artists .box:hover .text {
+  bottom: 3%;
+  opacity: 1;
+}
+
+.artists .box .text div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.artists .box .text div:nth-child(3) {
+  padding-bottom: 25px;
+}
+
+.artists .box .text div:last-child {
+  padding-top: 25px;
+  border-top: 1px solid black;
+}
+
+.artists .box .text div a {
+  color: var(--dark-red-color);
+  transition: var(--main-tarnistion);
+}
+
+.artists .box .text div a:hover {
+  color: white;
+}
+
+@media (max-width: 470px) {
+  .artists .box .text div:nth-child(3) {
+    padding-bottom: 10px;
+  }
+
+  .artists .box .text div:last-child {
+    padding-top: 10px;
+  }
+
+  .artists .box .text {
+    padding: 10px;
+  }
+
+  .artists .box .text p {
+    font-size: 15px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .artists .box .text span {
+    font-size: 13px !important;
+  }
+}
+
+/* end artist */
+/* start event */
+.event {
+  background-image: url(/images/nainoa-shizuru-unsplash-blur.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.event h1 {
+  font-size: 47px;
+}
+
+@media (max-width: 575.98px) {
+  .event h1 {
+    font-size: 30px;
+  }
+}
+
+.event > div {
+  filter: drop-shadow(2px 2px 4px #606060);
+}
+
+.event table th {
+  background-color: var(--light-red-color);
+}
+
+.event table {
+  border-radius: 20px;
+  border-color: #333;
+}
+
+.event table .bk-1,
+.event table .bk-2,
+.event table .bk-4 {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.event table .bk-1 {
+  background-image: url(/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg);
+}
+
+.event table .bk-2 {
+  background-image: url(/images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg);
+}
+
+.event table .bk-4 {
+  background-image: url(/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg);
+}
+
+.event table .text {
+  position: relative;
+}
+
+.event table .overl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000082;
+  z-index: 0;
+}
+
+.event table .bc-1 {
+  background-color: #f3dcd4;
+}
+
+.event table .bc-2 {
+  background-color: #ecc9c7;
+}
+
+.event table .bc-4 {
+  background-color: #d9e3da;
+}
+
+.event table .bc-5 {
+  background-color: #d1cfc0;
+}
+
+/* end event */
+/* start plans */
+.plans {
+  background-color: #f0f8ff;
+}
+
+.plans h1 {
+  font-size: 47px;
+}
+
+@media (max-width: 575.98px) {
+  .plans h1 {
+    font-size: 30px;
+  }
+}
+
+.plans .holder {
+  border: 4px dotted black;
+}
+
+.plans .ser {
+  width: 120px;
+  height: 120px;
+  background-color: var(--light-red-color);
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.plans .body ul li {
+  font-size: 17px;
+}
+
+.lin a {
+  color: var(--yelewo-color);
+  transition: var(--main-tarnistion);
+}
+
+.lin a:hover {
+  color: var(--dark-red-color);
+}
+
+.lin a span {
+  transition: var(--main-tarnistion);
+}
+
+.lin a:hover span {
+  margin-right: 10px;
+}
+
+/* end plans */
+/* start intersted */
+.intrested h1 {
+  font-size: 47px;
+}
+
+@media (max-width: 575.98px) {
+  .intrested h1 {
+    font-size: 30px;
+  }
+}
+
+.intrested .chose {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 20px;
+  width: fit-content;
+  margin: auto;
+  background-color: #f0f8ff;
+  border-radius: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.intrested .chose div {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50px;
+  color: #333;
+  cursor: pointer;
+  transition: var(--main-tarnistion);
+}
+
+.intrested .chose div.active {
+  background-color: white;
+  color: var(--yelewo-color);
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+}
+.intrested .holder {
+  border-radius: 20px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  min-height: 500px;
+}
+textarea {
+  height: 120px;
+  resize: none;
+}
+.intrested .holder input::placeholder {
+  font-size: 16px;
+}
+.intrested .holder .sub {
+  padding: 10px 40px;
+  border-radius: 50px;
+  background-color: var(--light-red-color);
+  border: none;
+  transition: var(--main-tarnistion);
+}
+.intrested .holder .sub:hover {
+  background-color: var(--dark-red-color);
+}
+.intrested .mpp {
+  height: 450px;
+  width: 90%;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.intrested .maps {
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+}
+.intrested .info {
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.intrested .mpp.active,
+.intrested .info.active {
+  opacity: 1;
+  z-index: 1;
+}
+/* end intersted */
+/* start fast */
+.fast {
+  background-color: var(--light-red-color);
+}
+.fast h1 {
+  font-size: 47px !important;
+}
+.fast ul li a {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+
+  border-radius: 100%;
+  margin: 0;
+  transition: var(--main-tarnistion);
+  color: white;
+  font-size: 17px;
+}
+.colord {
+  color: var(--yelewo-color) !important;
+}
+.fast ul li a:hover {
+  background-color: var(--yelewo-color);
+  animation: rota linear infinite 2s;
+}
+
+@keyframes rota {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* end fast */
+/* start topfooter */
+.tra {
+  transition: var(--main-tarnistion);
+}
+.tra:hover {
+  color: var(--dark-red-color) !important;
+}
+/* end topfooter */
+/* start donate */
+.do-hero {
+  background-image: url(/images/nicholas-green-unsplash-blur.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.do-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0000008c;
+  position: absolute;
+}
+.do {
+  height: 100%;
+}
+@media (max-width: 575.98px) {
+  .f-ho div {
+    width: 100% !important;
+  }
+}
+.f-bt {
+  padding: 10px 30px;
+  background-color: var(--light-red-color);
+  border: transparent;
+  transition: var(--main-tarnistion);
+}
+.f-bt:hover {
+  background-color: var(--dark-red-color);
+}
+/* end donate */
