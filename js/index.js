@@ -22,19 +22,22 @@ links.forEach((ele) => {
 });
 
 const lis = document.querySelectorAll(".ul-l li a");
+
 lis.forEach((ele) => {
   ele.addEventListener("click", function (e) {
     const id = e.currentTarget.getAttribute("href").slice(1);
-    console.log(id);
     e.preventDefault();
     let element = document.getElementById(id);
+    console.log(id);
     const nv = document.querySelector(".navbar");
     const mainNav = document
       .querySelector(".navbar")
       .getBoundingClientRect().height;
     let position = element.offsetTop - mainNav;
-    let container = document.querySelector(".navbar .container");
-    console.log(container);
+    let container = document
+      .querySelector(".navbar .container")
+      .getBoundingClientRect().height;
+
     const topNav = document
       .querySelector(".topnav")
       .getBoundingClientRect().height;
@@ -66,6 +69,28 @@ chose.forEach((ele) => {
       ele.classList.remove("active");
     });
     element.classList.add("active");
+  });
+});
+
+let linksch = document.querySelectorAll(".navbar ul li a");
+let sections = document.querySelectorAll("section");
+const mainNav = document
+  .querySelector(".navbar")
+  .getBoundingClientRect().height;
+
+window.addEventListener("scroll", function (e) {
+  let height = window.scrollY;
+  sections.forEach((ele) => {
+    let secheight = ele.offsetTop - mainNav;
+    if (height >= secheight) {
+      let id = ele.dataset.num;
+      let f = document.getElementById(id);
+
+      links.forEach((ele) => {
+        ele.classList.remove("active");
+      });
+      f.classList.add("active");
+    }
   });
 });
 function initMap() {

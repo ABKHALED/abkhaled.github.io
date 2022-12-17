@@ -25,7 +25,7 @@
     </div>
   </nav>
   <!-- start hero -->
-  <section class="main pb-3 position-relative" id="home">
+  <section class="main pb-3 position-relative" id="home" data-num="0">
     <nav class="navbar navbar-expand-lg pt-lg-3 pb-lg-3 ">
       <div class="container">
         <a class="navbar-brand fs-4 fw-bold text-light" href="#">Festava Live</a>
@@ -42,22 +42,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 gap-xl-5 ul-l" >
             <li class="nav-item">
-              <a class="nav-link active " aria-current="page" href="#home">Home</a>
+              <a class="nav-link text-light active " aria-current="page" id="0" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link text-light" id="1" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#artists">Artists</a>
+              <a class="nav-link text-light" id="2" href="#artists">Artists</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#schedule">Schedule</a>
+              <a class="nav-link text-light" id="3" href="#schedule">Schedule</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#pricing">Pricing</a>
+              <a class="nav-link text-light" id="4" href="#pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link text-light" id="5" href="#contact">Contact</a>
             </li>
             <a href="/donat.html" class="nav-link btn rounded-pill d-none d-lg-block text-light main-btn ps-3 pe-3">Buy Ticket</a>
           </ul>
@@ -70,9 +70,9 @@
         <source src="/images/pexels-2022395.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="hero position-relative text-light">
+    <div class="hero position-relative text-light d-flex align-items-center justify-content-center" style="min-height: 100vh;">
       <div class="container d-flex align-items-center justify-content-center " style="height:100% ;">
-        <div class="row ">
+        <div class="row " style="height: 100%;">
           <div class="col-12 text-center text mb-1 mb-sm-5">
             <span>FESTAVA LIVE PRESENTS</span>
             <h1 class="fw-bold mb-2 mb-sm-5">Night Live 2023</h1>
@@ -109,7 +109,7 @@
   </section>
   <!-- end hero -->
   <!-- start about -->
-  <section class="about pt-5 pb-5 text-light" id="about">
+  <section class="about pt-5 pb-5 text-light sc" id="about" data-num="1">
     <div class="container pt-md-5 pb-md-5 ">
       <div class="row">
         <div class="col-12 col-lg-6 left">
@@ -139,7 +139,7 @@
   </section>
   <!-- end about -->
   <!-- start artist -->
-  <section class="artists pt-5 pb-5" id="artists">
+  <section class="artists pt-5 pb-5 sc" id="artists" data-num="2">
     <div class="container pt-sm-5 pb-sm-5">
       <h1 class="text-center fw-bold mb-4">Meet Artists</h1>
       <div class="row justify-content-center">
@@ -224,7 +224,7 @@
   </section>
   <!-- end artist -->
   <!-- start Events  -->
-  <section class="event pt-5 pb-5 text-light" id="schedule">
+  <section class="event pt-5 pb-5 text-light sc" id="schedule" data-num="3">
     <div class="container pt-sm-5 pb-sm-5">
       <h1 class="text-center fw-bold">Event Schedule</h1>
       <div class="table-responsive">
@@ -301,7 +301,7 @@
   </section>
   <!-- end Events  -->
   <!-- start plans -->
-  <section class="plans pt-5 pb-5" id="pricing">
+  <section class="plans pt-5 pb-5 sc" id="pricing" data-num="4">
     <div class="container pt-sm-5 pb-sm-5">
       <h1 class="text-center fw-bold">Plans, you' love</h1>
       <div class="row mt-4">
@@ -364,7 +364,7 @@
   </section>
   <!-- end plans -->
   <!-- start Interested -->
-  <section class="intrested pt-5 pb-5 text-center" id="contact">
+  <section class="intrested pt-5 pb-5 text-center sc" id="contact" data-num="5">
     <div class="container pt-sm-5 pb-sm-5">
       <h1 class="text-center fw-bold">Interested? Let's talk</h1>
       <div class="chose mt-4 ">

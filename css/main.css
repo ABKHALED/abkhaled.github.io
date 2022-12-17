@@ -11,7 +11,7 @@ a {
 
 body {
   font-family: "Outfit", sans-serif;
-  height: 1000px;
+ 
 }
 
 .main-btn {
@@ -74,13 +74,13 @@ body {
 .navbar ul .active {
   color: var(--light-red-color) !important;
 }
-
 /* end navbar */
 .main {
-  height: calc(100vh - 46px);
+  /* height: calc(100vh - 46px); */
+  min-height: calc(100vh - 46px);
 }
 .do-hero {
-  height: 130vh;
+  min-height: calc(100vh - 46px);
 }
 .main .overlay {
   width: 100%;
